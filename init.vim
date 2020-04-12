@@ -67,5 +67,5 @@ source $HOME/.config/nvim/layers/coc.vim      " Coc Configuration (autocomplete)
 source $HOME/.config/nvim/layers/file.vim     " File browsing and management
 source $HOME/.config/nvim/layers/git.vim      " Git integration and tools
 source $HOME/.config/nvim/layers/theme.vim    " Theming and colors
-source $HOME/.config/nvim/layers/startify.vim " Theming and colors
-source $HOME/.config/nvim/layers/bindings.vim " Theming and colors
+source $HOME/.config/nvim/layers/startify.vim " Start screen
+source $HOME/.config/nvim/layers/bindings.vim " Key bindings
