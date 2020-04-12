@@ -1,0 +1,217 @@
+# vim: ft=colortemplate fdm=marker cc=22,40,58 et ts=2 sw=2
+
+# Information {{{
+# Mandatory
+Full name:     Lazerwave
+Short name:    lazerwave
+Author:    Jordan Sullivan <jordanmsllvn@gmail.com>
+# Optional
+Description:   Port of Jared Jones' great VSCode theme 
+License:       Public domain
+# Prefix for options: short name is used if this key is not present:
+Option Prefix: lazerwave
+# }}}
+
+# Documentation {{{
+Include: _help.colortemplate
+# }}}
+
+# Common linked groups {{{
+QuickFixLine      -> Search
+StatusLineTerm    -> StatusLine
+StatusLineTermNC  -> StatusLineNC
+Boolean           -> Constant
+Character         -> Constant
+Conditional       -> Statement
+Define            -> PreProc
+Debug             -> Special
+Delimiter         -> Special
+Exception         -> Statement
+Float             -> Constant
+Include           -> PreProc
+Keyword           -> Statement
+Label             -> Statement
+Macro             -> PreProc
+PreCondit         -> PreProc
+Repeat            -> Statement
+SpecialChar       -> Special
+SpecialComment    -> Special
+StorageClass      -> Type
+Structure         -> Type
+Typedef           -> Type
+Function          -> Identifier
+# See `:help lCursor`
+lCursor           -> Cursor
+# }}}
+
+Background: dark
+
+# Color palette {{{
+# Color name         GUI                     Base256     Base16 (optional)
+Color: maxblue       #40b4c4                 ~           White
+Color: hotpink       #eb64b9                 ~           White
+Color: red           #eb6668                 ~           Red
+Color: powderblue    #b4dce7                 ~           White
+Color: afviolet      #b381c5                 ~           White
+Color: pearlaq       #74dfc4                 ~           White
+Color: oldlaven      #91889b                 ~           White
+Color: romsilv       #716385                 ~           White
+Color: mustard       #ffe261                 ~           White
+Color: white         #f8f2ff                 ~           White
+Color: black         #27212e                 ~           Black
+Color: darker        #221c29                 ~           Black
+Color: lighter       #46404d                 ~           White
+Color: blacker       #1a1421                 ~           Black
+Color: brightblack   rgb(210, 210, 210)        ~         DarkGrey
+Color: brightred     rgb(255, 100,   0)        ~         LightRed
+Color: brightgreen   rgb(100, 255,   0)        ~         LightGreen
+Color: brightyellow  rgb(255, 255, 100)        ~         LightYellow
+Color: brightblue    rgb(  0, 100, 255)        ~         LightBlue
+Color: brightmagenta rgb(255, 100, 255)        ~         LightMagenta
+Color: brightcyan    rgb(100, 255, 255)        ~         LightCyan
+Color: brightwhite   rgb(255, 255, 255)        ~         LightCyan
+# }}}
+# Terminal colors {{{
+Term colors: black hotpink pearlaq mustard maxblue afviolet powderblue white
+Term colors: brightblack brightred brightgreen brightyellow
+Term colors: brightblue brightmagenta brightcyan brightwhite
+# }}}
+
+# Default highlight groups {{{
+Variant: gui
+#if get(g:, '@optionprefix_transp_bg', 0) && !has('gui_running')
+Variant: 256 8
+#if get(g:, '@optionprefix_transp_bg', 0)
+Variant: gui 256 8
+    Normal           white             none
+    Terminal         white             none
+#else
+    Normal           white             black
+    Terminal         white             darker
+#endif
+
+# Group              Foreground        Background        Attributes
+ColorColumn          fg                black
+Conceal              none              none
+Cursor               none              none
+CursorColumn         white             black
+CursorLine           none              darker
+CursorLineNr         pearlaq           black
+DiffAdd              maxblue           black             reverse
+DiffChange           hotpink           black             reverse
+DiffDelete           red               black             reverse
+DiffText             white             black             bold,reverse
+Directory            white             black
+EndOfBuffer          blacker           black
+ErrorMsg             red               black             reverse
+FoldColumn           white             black
+Folded               white             blacker             italic
+IncSearch            white             blacker             t=reverse g=standout
+LineNr               lighter           black
+MatchParen           mustard           black
+ModeMsg              white             black
+MoreMsg              white             black
+NonText              hotpink           black
+Pmenu                white             darker
+PmenuSbar            white             black
+PmenuSel             pearlaq           blacker
+PmenuThumb           white             black
+Question             white             black
+Search               white             blacker
+SignColumn           white             darker
+SpecialKey           white             black
+SpellBad             white             black             s=hotpink
+SpellCap             white             black             s=maxblue
+SpellLocal           white             black             s=afviolet
+SpellRare            white             black             s=powderblue reverse
+StatusLine           white             black
+StatusLineNC         white             black
+TabLine              white             black
+TabLineFill          white             black
+TabLineSel           white             black
+Title                hotpink           black
+VertSplit            blacker           black
+Visual               blacker             maxblue
+VisualNOS            pearlaq             black
+WarningMsg           mustard             black
+WildMenu             white             black
+# Other conventional group names (see `:help group-name`)
+Comment              oldlaven          none              italic
+Constant             mustard           none
+Error                red               none              bold
+Identifier           hotpink           none
+Ignore               white             none
+PreProc              white             none
+Special              oldlaven          none
+Statement            maxblue           none
+Todo                 pearlaq           none
+Type                 pearlaq           none
+Underlined           white             none
+String               powderblue        none
+Operator             pearlaq           none
+Number               afviolet          none
+# See `:help CursorIM`
+CursorIM             none              fg
+# See `:help window-toolbar`
+ToolbarLine          none              black
+ToolbarButton        white             black             bold
+Tag                  pearlaq           none
+# }}}
+
+# Additional highlight groups {{{
+# Add additional highlight groups here if you want
+CocErrorSign         -> Error 
+CocHighlightText     white             blacker           bold
+# JS
+jsArrow              pearlaq           none
+jsThis               mustard           none              bold
+jsIdentifierProp     maxblue           none
+jsVariableType       maxblue           none
+jsObject             pearlaq           none              
+jsSuper              pearlaq           none              bold
+jsxTagName           pearlaq           none
+jsIf                 maxblue           none              bold
+jsElse               maxblue           none              bold
+jsTry                maxblue           none              bold
+jsCatch              maxblue           none              bold
+jsObjectKey          hotpink           none              
+jsObjectKeyString    ->    jsObjectKey
+
+#GitGutter
+GitGutterAdd         maxblue           none
+GitGutterChange      mustard           none
+GitGutterDelete      red               none
+
+#PHP
+phpStorageClass  ->  phpStructure
+phpStringSingle  ->  phpStringDouble
+phpIdentifier        white             none
+phpStructure         maxblue           none              bold
+phpStringDouble      afviolet          none
+phpNumber            maxblue           none
+phpConditional       ->   phpStructure
+phpRepeat            ->   phpStructure
+phpOperator          romsilv           none              bold
+phpVarSelector       hotpink        none              bold
+phpMethodsVar        maxblue           none              
+
+#Markdown
+markdownHeadingDelimiter      hotpink  none 
+markdownH1          maxblue            none 
+markdownH2          maxblue            none 
+markdownH3          maxblue            none 
+markdownH5          maxblue            none 
+markdownH5          maxblue            none 
+markdownH6          maxblue            none 
+markdownCode        hotpink           none
+markdownCodeDelimiter pearlaq          none
+markdownListMarker  pearlaq            none
+markdownLink        pearlaq            none
+markdownLinkText    mustard            none
+markdownUrl         pearlaq            none
+
+# }}}
+
+# B/W variant {{{
+Include: _bw.colortemplate
+# }}}
