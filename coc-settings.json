@@ -11,6 +11,9 @@
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextPrefix": "  ",
 
+  //Emmet
+  "emmet.includeLanguages": {"javascript": "javascriptreact"},
+
   //CocList
   "list.source.files.defaultOptions": ["--auto-preview"],
   "list.source.outline.defaultOptions": ["--auto-preview"],

@@ -37,7 +37,9 @@
         \ 'coc-lists',
         \ 'coc-post',
         \ 'coc-gitignore',
-        \ 'coc-utils'
+        \ 'coc-utils',
+        \ 'coc-clangd',
+        \ 'coc-omnisharp'
         \]
 
 augroup mygroup
@@ -59,3 +61,4 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+

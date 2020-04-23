@@ -74,7 +74,7 @@ let g:which_key_map.v = {
       \}
 
 
-" NERD Commenter
+" Comments
 " --------------
 " Toggle comments in visual or normal mode
 nnoremap <leader>cc :call NERDComment(0,"toggle")<cr>
@@ -94,6 +94,10 @@ vnoremap <leader>ci :call NERDComment(1,"invert")<cr>
 " comment section
 nnoremap <leader>cx :call NERDComment(0,"comment")<cr>
 vnoremap <leader>cx :call NERDComment(1,"comment")<cr>
+
+nmap <leader>cd <Plug>(jsdoc)
+
+
 let g:which_key_map.c = { 
       \'name' : '+comments', 
       \'c': 'Toggle comment',
@@ -101,7 +105,8 @@ let g:which_key_map.c = {
       \'a': 'Append comment',
       \'u': 'Uncomment',
       \'i': 'Invert comments',
-      \'x': 'Comment section'
+      \'x': 'Comment section',
+      \'d': 'Add JSDoc to function'
       \}
 
 

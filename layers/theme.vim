@@ -28,15 +28,15 @@ let g:lightline#colorscheme#Custom#palette = lightline#colorscheme#fill(s:p)
 
 "Set theme
 let g:lightline.colorscheme = 'Custom'
-colo lazerwave
+colo lazerwave_transparent
 
 " Remove carets status line carats by differing built in vim status bar
 " backgrounds
-highlight StatusLine   cterm=none ctermfg=white ctermbg=black guibg=#27212e
-highlight StatusLineNC cterm=none ctermfg=white ctermbg=black guibg=#1aq421
+highlight StatusLine   cterm=none ctermfg=white ctermbg=NONE guibg=#27212e
+highlight StatusLineNC cterm=none ctermfg=white ctermbg=NONE guibg=#1aq421
 
 " Uncomment the below for transparent background
-"  hi Normal ctermbg=NONE guibg=NONE
-"  hi NonText ctermbg=NONE guibg=NONE
-"  hi SignColumn ctermbg=NONE guibg=NONE
-"  hi LineNr ctermbg=NONE guibg=NONE
+"hi Normal ctermbg=NONE guibg=NONE
+"hi NonText ctermbg=NONE guibg=NONE
+"hi SignColumn ctermbg=NONE guibg=NONE
+"hi LineNr ctermbg=NONE guibg=NONE

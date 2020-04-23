@@ -25,6 +25,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'cakebaker/scss-syntax.vim'        " SCSS/CSS syntax support
   Plug 'digitaltoad/vim-jade'             " Jade/Pug syntax support
   Plug 'leafgarland/typescript-vim'       " Typescript support
+  Plug 'bfrg/vim-cpp-modern'              " Modern C++ highlighting
+  Plug 'OmniSharp/omnisharp-vim'          " Omnisharp for vim (C#)
+  Plug 'oranget/vim-csharp'
 
   " text
   Plug 'editorconfig/editorconfig-vim'    " Inherit settings from .editorconfig in the base directory
@@ -33,6 +36,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'jiangmiao/auto-pairs'
   Plug 'scrooloose/nerdcommenter'
+  Plug 'heavenshell/vim-jsdoc'
 
   " theme
   Plug 'whatyouhide/vim-gotham'           " color scheme works in 16 colors :D
