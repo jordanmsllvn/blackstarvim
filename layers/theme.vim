@@ -28,7 +28,7 @@ let g:lightline#colorscheme#Custom#palette = lightline#colorscheme#fill(s:p)
 
 "Set theme
 let g:lightline.colorscheme = 'Custom'
-colo lazerwave_transparent
+colo lazerwave
 
 " Remove carets status line carats by differing built in vim status bar
 " backgrounds

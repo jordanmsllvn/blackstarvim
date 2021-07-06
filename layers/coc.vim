@@ -37,7 +37,6 @@
         \ 'coc-lists',
         \ 'coc-post',
         \ 'coc-gitignore',
-        \ 'coc-utils',
         \ 'coc-clangd',
         \ 'coc-omnisharp'
         \]
