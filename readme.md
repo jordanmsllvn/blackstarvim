@@ -21,10 +21,28 @@
 - Heavy use of NerdFont glyphs to enhance ui and editing. 
 
 ## System requirements
-- NeoVim
+- HomeBrew
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+- Kitty?
+    brew install --cask kitty
+- Oh-my-zsh
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+- Python 
+    brew install python
+- Nvm 
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+    Add this to your .zshrc:
+    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+- NeoVim 
+    brew install neovim
+    pip3 install pynvim
 - Ranger (For project navigation)
+    brew install ranger
 - A NerdFont loaded into terminal [Get here](https://github.com/ryanoasis/nerd-fonts)
 - Lazygit
+    brew install lazygit
 - Ctags
+    brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 - NodeJs (For CoC autocompletion)
-- Python
+    brew install node
